@@ -354,10 +354,16 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive */
+            gap: 2rem; /* space between cards */
         }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr); /* exactly 2 columns on larger screens */
+            }
+        }
+
 
         .project-card {
             background: rgba(255, 255, 255, 0.03);
@@ -713,6 +719,28 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            .tagline {
+            font-size: 1.8rem;
+            font-weight: 500;
+            background: linear-gradient(45deg, #dc2626, #ffffff, #b91c1c);
+            background-clip: text;               /* Standard property */
+            -webkit-background-clip: text;       /* WebKit browsers */
+            -webkit-text-fill-color: transparent;
+            animation: fadeInTagline 1.5s ease-out 0.5s both;
+            }
+
+
+            @keyframes fadeInTagline {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
         }
     </style>
 </head>
@@ -728,7 +756,7 @@
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="skills.html">Skills and Certificates</a></li>
                 <li class="nav-item"><a href="#projects">Projects</a></li>
-                <li class="nav-item"><a href="Victor's Resume.pdf">Resume</a>/a></li>
+                <li class="nav-item"><a href="Victor's Resume.pdf">Resume</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -748,9 +776,9 @@
         </div>
         <div class="hero-content">
             <h1 class="hero-title">Creative Developer and Analyst</h1>
-            <p class="hero-subtitle">Building amazing digital experiences with code and creativity</p>
-            <!-- <a href="Victor's Resume.pdf" class="cta-button">Resume</a> -->
+            <p class="hero-subtitle tagline">Where technology meets creativity.</p>
         </div>
+
     </section>
 
     <section id="about" class="section">
@@ -758,14 +786,14 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>As passionate developer, I pride myself on creating functional, aesthetically pleasing, 
-                        and userfriendly digital solutions. As a resourceful Computer Science graduate, I bring handson expertise in Python 
-                        development, data science fundamentals through ALX certification, and video production to every project I tackle.
-                        My technical foundation runs deep from network security work including MANET project development to practical hardware repair and 
-                        virtual assistance capabilities. What sets me apart is how I translate complex technical challenges into solutions that actually 
-                        work for people. Currently seeking roles that bridge technical innovation with user-centered design, 
-                        I'm proactive, organized, and a fast learner who adapts quickly to new challenges.</p>
-                    <p>When I'm not coding, you'll find me exploring emerging technologies, crafting video content, or developing striking 3D 
+                    <p>I’m Victor Oyewole, a resourceful Computer Science graduate with a passion for building innovative, 
+                        user-focused solutions. With hands-on expertise in Python development, data analytics, and creative video editing,
+                         I bridge the gap between technical problem-solving and engaging storytelling. My experience includes delivering data-driven 
+                         insights using Python, SQL, and visualization tools, as well as crafting compelling video content that aligns with brand strategies.
+                         Beyond my technical and creative work, I bring strong skills in virtual assistance, project coordination, and web design, making me a 
+                         versatile contributor in dynamic environments. I’m constantly learning currently deepening my expertise in data science, cloud technologies, 
+                         and advanced analytics while staying committed to creating solutions that are as functional as they are impactful.</p>
+                    <p>When I'm not coding, you'll find me exploring emerging technologies, crafting video content, gaming or developing striking 3D 
                         visualizations in Blender.</p>
                 </div>
                 <div class="about-image">
@@ -822,9 +850,22 @@
                         <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Donut.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <a href="donut.mp4" target="_blank" class="project-title-link">
+                            <h3 class="project-title">Donut Animation</h3>
+                        </a>
+                        <p>My First Blender Animation</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- <section id="certificates" class="section">
         <div class="container">
