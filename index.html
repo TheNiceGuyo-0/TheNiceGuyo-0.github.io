@@ -592,6 +592,32 @@
             .project-card:hover {
                 transform: none; 
             }
+            /* Add this to your existing CSS */
+            .project-title-link {
+                text-decoration: none;
+                color: inherit;
+                display: inline-block;
+            }
+
+            .project-title-link:hover .project-title {
+                color: #dc2626;
+                text-decoration: underline;
+            }
+
+            .project-title {
+                transition: color 0.3s ease, text-decoration 0.3s ease;
+                margin-bottom: 0.5rem;
+                color: #00ffff;
+            }
+
+/* Prevent the entire card from being clickable */
+            .project-card {
+                cursor: default;
+            }
+
+            .project-card a {
+                cursor: pointer;
+            }
         }
     </style>
 </head>
@@ -686,49 +712,44 @@
     </section>
 
     <section id="projects" class="section">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1 with link -->
-            <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-link">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="diamond.jpeg" alt="Project 1 Screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Diamond Price Analyzer</h3>
-                        <p>Project description goes here</p>
-                    </div>
+                        <img src="diamond.jpeg" alt="Project 1" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-            </a>
-            
-            <!-- Project 2 with link -->
-            <a href="https://your-project2-url.com" target="_blank" class="project-link">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project2.jpg" alt="Project 2 Screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project 2</h3>
-                        <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
-                    </div>
+                <div class="project-content">
+                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
+                    <h3 class="project-title">Diamond Price Analyzer</h3>
+                    </a>
+                    <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
                 </div>
-            </a>
-            
-            <!-- Project 3 with link -->
-            <a href="https://your-project3-url.com" target="_blank" class="project-link">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project3.jpg" alt="Project 3 Screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project 3</h3>
-                        <p>Project description goes here</p>
-                    </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/b91c1c/ffffff?text=Project+2" alt="Project 2" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-            </a>
+                <div class="project-content">
+                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
+                    <h3 class="project-title">Portfolio Dashboard</h3>
+                    </a>
+                    <p>Interactive analytics dashboard with D3.js visualization</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/991b1b/ffffff?text=Project+3" alt="Project 3" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="project-content">
+                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
+                     <h3 class="project-title">Mobile App UI</h3>
+                    </a>
+                     <p>Fitness tracking app UI designed in Figma and implemented with React Native</p>
+                </div>
+                </div>
+            </div>
         </div>
-    </div>
     </section>
 
     <section id="contact" class="section">
