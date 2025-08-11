@@ -429,7 +429,7 @@
         .project-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: #f41313;
+            color: #00ffff;
             transition: color 0.3s ease, text-decoration 0.3s ease;
         }
 
@@ -519,7 +519,7 @@
         .certificate-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: #f70c0c;
+            color: #00ffff;
             transition: color 0.3s ease, text-decoration 0.3s ease;
         }
 
@@ -662,7 +662,7 @@
         /* Special handling for LinkedIn icon */
         .social-link .linkedin-icon {
             filter: none; /* Remove the white filter */
-            background: #0077b5; /* LinkedIn brand blue */
+            background: #b50000; /* LinkedIn brand blue */
             border-radius: 2px;
             padding: 2px;
         }
@@ -888,26 +888,9 @@
             <a href="https://github.com/TheNiceGuyo-0" target="_blank" class="social-link">
                 <img src="Octicons-mark-github.svg" alt="GitHub" class="social-icon">
             </a>
-            <a href="#" class="social-link" onclick="openEmail(event)">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=victor.oy17@gmail.com&su=Portfolio%20Contact&body=Hi%20Victor,%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.%0A%0ABest%20regards," target="_blank" class="social-link">
                 <img src="Gmail_icon_(2020).svg" alt="Email" class="social-icon">
             </a>
-
-            <script>
-            function openEmail(event) {
-                event.preventDefault(); // stop default link behavior
-    
-                const gmailUrl = "https://mail.google.com/mail/?view=cm&to=victor.oy17@gmail.com";
-                const win = window.open(gmailUrl, "_blank"); // try Gmail in a new tab
-
-                // If blocked or failed, fall back to mailto:
-                setTimeout(() => {
-                    if (!win || win.closed || typeof win.closed === "undefined") {
-                        window.location.href = "mailto:victor.oy17@gmail.com";
-                    }
-                }, 500);
-            }
-            </script>
-
         </div>
     </footer>
 
@@ -1226,6 +1209,38 @@
                 card.style.transform = 'translateY(0) scale(1)';
             });
         });
+
+        // Smart email function - detects device and opens appropriate email method
+        function openEmail(event) {
+            event.preventDefault();
+            
+            const email = 'victor.oy17@gmail.com';
+            const subject = 'Portfolio Contact';
+            const body = 'Hi Victor,%0A%0AI found your portfolio and would like to get in touch.%0A%0ABest regards,';
+            
+            // Detect if user is on mobile device
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // On mobile, use mailto (opens native email app)
+                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+            } else {
+                // On desktop, try Gmail web interface first, fallback to mailto
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+                
+                // Try to open Gmail web interface
+                const gmailWindow = window.open(gmailUrl, '_blank');
+                
+                // If popup was blocked or failed, fallback to mailto
+                if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+                    setTimeout(() => {
+                        if (gmailWindow && gmailWindow.closed) {
+                            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+                        }
+                    }, 1000);
+                }
+            }
+        }
     </script>
 </body>
 </html>
