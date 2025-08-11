@@ -293,6 +293,35 @@
             margin-bottom: 0.5rem;
         }
 
+        .cert-title a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .cert-title a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .cert-title a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transform: translateX(5px);
+        }
+
+        .cert-title a:hover::after {
+            width: 100%;
+        }
+
         .cert-provider {
             color: #ffffff;
             opacity: 0.8;
@@ -501,32 +530,44 @@
             <h3><span class="cert-icon">🏆</span>Certifications & Credentials</h3>
             <div class="cert-grid">
                 <div class="cert-item">
-                    <div class="cert-title">ALX Professional Foundations</div>
+                    <div class="cert-title">
+                        <a href="https://savanna.alxafrica.com/certificates/Lp6fEmCe79?utm_campaign=53995757-ALX%20-%202025%20-%20TR%20-%20PF%20C0&utm_medium=email&_hsmi=104714207&utm_content=104714207&utm_source=hs_email" target="_blank" rel="noopener noreferrer">ALX Professional Foundations</a>
+                    </div>
                     <div class="cert-provider">ALX Africa</div>
                     <div class="cert-status">Completed - August 2025</div>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-title">ALX Data Science Specialization</div>
+                    <div class="cert-title">
+                        <a href="https://alxafrica.com/data-science" target="_blank" rel="noopener noreferrer">ALX Data Science Specialization</a>
+                    </div>
                     <div class="cert-provider">ALX Africa</div>
                     <div class="cert-status">In Progress - 16-month intensive</div>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-title">Python (Basic)</div>
+                    <div class="cert-title">
+                        <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" rel="noopener noreferrer">Python (Basic)</a>
+                    </div>
                     <div class="cert-provider">HackerRank</div>
                     <div class="cert-status">Certified</div>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-title">BSc Computer Science</div>
+                    <div class="cert-title">
+                        <a href="https://drive.google.com/file/d/1ImBA9sB0E9Z6iZFuquljGbvsg8Bp32u/view?usp=sharing" target="_blank" rel="noopener noreferrer">BSc Computer Science</a>
+                    </div>
                     <div class="cert-provider">Ajayi Crowther University</div>
                     <div class="cert-status">Graduated July 2024</div>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-title">AWS Cloud Practitioner</div>
+                    <div class="cert-title">
+                        <a href="#" target="_blank" rel="noopener noreferrer">AWS Cloud Practitioner</a>
+                    </div>
                     <div class="cert-provider">Amazon Web Services</div>
                     <div class="cert-status">In Progress</div>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-title">ALX Data Analytics</div>
+                    <div class="cert-title">
+                        <a href="https://alxafrica.com/data-analytics" target="_blank" rel="noopener noreferrer">ALX Data Analytics</a>
+                    </div>
                     <div class="cert-provider">ALX Africa</div>
                     <div class="cert-status">In Progress</div>
                 </div>
