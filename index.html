@@ -83,6 +83,52 @@
             list-style: none;
             gap: 2rem;
         }
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                background: rgba(10, 10, 10, 0.95);
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                width: 200px;
+                padding: 1rem;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            }
+            .nav-menu.show {
+                display: flex;
+                animation: fadeIn 0.3s ease forwards;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
 
         .nav-item a {
             color: #ffffff;
@@ -740,35 +786,6 @@
                     transform: translateY(0);
                 }
             }
-            .menu-toggle {
-                display: none;
-                font-size: 2rem;
-                cursor: pointer;
-                color: white;
-            }
-
-            @media (max-width: 768px) {
-                .menu-toggle {
-                    display: block;
-                }
-                .nav-menu {
-                    display: none;
-                    flex-direction: column;
-                    gap: 1rem;
-                    background: rgba(10, 10, 10, 0.95);
-                    position: absolute;
-                    top: 60px;
-                    right: 0;
-                    width: 200px;
-                    padding: 1rem;
-                    border-radius: 10px;
-                }
-                .nav-menu.show {
-                    display: flex;
-                }
-            }
-
-
         }
     </style>
 </head>
@@ -777,10 +794,14 @@
     <canvas id="three-background"></canvas>
     
     <nav class="navbar">
-        <div class="menu-toggle" id="menu-toggle">
+        <div class="nav-container">
             <div class="logo">Victor Oyewole</div>
+
+            <!-- Hamburger menu button -->
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
             <ul class="nav-menu">
-                <!-- <li class="nav-item"><a href="#home">Home</a></li> -->
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="skills.html">Skills and Certificates</a></li>
                 <li class="nav-item"><a href="#projects">Projects</a></li>
