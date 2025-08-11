@@ -740,6 +740,34 @@
                     transform: translateY(0);
                 }
             }
+            .menu-toggle {
+                display: none;
+                font-size: 2rem;
+                cursor: pointer;
+                color: white;
+            }
+
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
+                .nav-menu {
+                    display: none;
+                    flex-direction: column;
+                    gap: 1rem;
+                    background: rgba(10, 10, 10, 0.95);
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    width: 200px;
+                    padding: 1rem;
+                    border-radius: 10px;
+                }
+                .nav-menu.show {
+                    display: flex;
+                }
+            }
+
 
         }
     </style>
@@ -749,7 +777,7 @@
     <canvas id="three-background"></canvas>
     
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="menu-toggle" id="menu-toggle">
             <div class="logo">Victor Oyewole</div>
             <ul class="nav-menu">
                 <!-- <li class="nav-item"><a href="#home">Home</a></li> -->
@@ -1283,5 +1311,11 @@
             }
         }
     </script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('show');
+    });
+    </script>
+
 </body>
 </html>
