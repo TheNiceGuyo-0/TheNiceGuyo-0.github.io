@@ -68,6 +68,7 @@
             font-weight: bold;
             background: linear-gradient(45deg, #dc2626, #ffffff);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: glow 2s ease-in-out infinite alternate;
         }
@@ -125,6 +126,7 @@
             margin-bottom: 1rem;
             background: linear-gradient(45deg, #dc2626, #ffffff, #b91c1c);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: slideInDown 1s ease-out;
             text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
@@ -212,6 +214,7 @@
             margin-bottom: 3rem;
             background: linear-gradient(45deg, #dc2626, #b91c1c);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
             transform: translateY(50px);
@@ -343,6 +346,7 @@
             margin-bottom: 1rem;
             background: linear-gradient(45deg, #dc2626, #b91c1c);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
             z-index: 1;
@@ -554,6 +558,22 @@
             .hero-content {
                 padding: 2rem;
             }
+            .project-image {
+                height: 200px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .project-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .project-card:hover .project-image img {
+                transform: scale(1.1);
+            }
         }
     </style>
 </head>
@@ -653,30 +673,30 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        Project Screenshot
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name</h3>
-                        <p>Project details</p>
-                    </div>
+                        <img src="https://via.placeholder.com/600x400/dc2626/ffffff?text=Project+1" alt="Project 1" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name</h3>
-                        <p>Project details</p>
-                    </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-commerce Website</h3>
+                    <p>A fully responsive online store built with React and Node.js</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name</h3>
-                        <p>Project details.</p>
-                    </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/b91c1c/ffffff?text=Project+2" alt="Project 2" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Dashboard</h3>
+                    <p>Interactive analytics dashboard with D3.js visualization</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/991b1b/ffffff?text=Project+3" alt="Project 3" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="project-content">
+                     <h3 class="project-title">Mobile App UI</h3>
+                     <p>Fitness tracking app UI designed in Figma and implemented with React Native</p>
+                </div>
                 </div>
             </div>
         </div>
