@@ -1363,13 +1363,24 @@
             }
         }
     </script>
-        <script>
+    <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
+    // Toggle hamburger to "X" and menu visibility
     menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active'); // Animate to "X"
-        navMenu.classList.toggle('show'); // Show menu
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('show');
+    });
+
+    // Auto-close menu on mobile when clicking a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                menuToggle.classList.remove('active');
+            }
+        });
     });
     </script>
 
