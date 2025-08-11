@@ -659,6 +659,14 @@
             transition: all 0.3s ease;
         }
 
+        /* Special handling for LinkedIn icon */
+        .social-link .linkedin-icon {
+            filter: none; /* Remove the white filter */
+            background: #0077b5; /* LinkedIn brand blue */
+            border-radius: 2px;
+            padding: 2px;
+        }
+
         .social-link:hover {
             transform: translateY(-5px) scale(1.1);
             background: linear-gradient(45deg, #dc2626, #b91c1c);
@@ -668,6 +676,12 @@
 
         .social-link:hover .social-icon {
             filter: brightness(0) invert(1);
+        }
+
+        /* Keep LinkedIn icon visible on hover */
+        .social-link:hover .linkedin-icon {
+            filter: none;
+            background: #ffffff;
         }
 
         @media (max-width: 768px) {
@@ -868,7 +882,7 @@
             <a href="https://x.com/TheNiceGuy_0_o" target="_blank" class="social-link">
                 <img src="Logo_of_Twitter.svg" alt="Twitter" class="social-icon">
             </a>
-            <a href="https://www.linkedin.com/in/victor-oyewole-504751218/" target="_blank" class="social-link">
+            <a href="www.linkedin.com/in/victor-oyewole-504751218" target="_blank" class="social-link">
                 <img src="LinkedIn_icon.svg" alt="LinkedIn" class="social-icon">
             </a>
             <a href="https://github.com/TheNiceGuyo-0" target="_blank" class="social-link">
