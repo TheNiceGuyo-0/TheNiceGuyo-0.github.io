@@ -888,9 +888,26 @@
             <a href="https://github.com/TheNiceGuyo-0" target="_blank" class="social-link">
                 <img src="Octicons-mark-github.svg" alt="GitHub" class="social-icon">
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=victor.oy17@gmail.com" class="social-link">
+            <a href="#" class="social-link" onclick="openEmail(event)">
                 <img src="Gmail_icon_(2020).svg" alt="Email" class="social-icon">
             </a>
+
+            <script>
+            function openEmail(event) {
+                event.preventDefault(); // stop default link behavior
+    
+                const gmailUrl = "https://mail.google.com/mail/?view=cm&to=victor.oy17@gmail.com";
+                const win = window.open(gmailUrl, "_blank"); // try Gmail in a new tab
+
+                // If blocked or failed, fall back to mailto:
+                setTimeout(() => {
+                    if (!win || win.closed || typeof win.closed === "undefined") {
+                        window.location.href = "mailto:victor.oy17@gmail.com";
+                    }
+                }, 500);
+            }
+            </script>
+
         </div>
     </footer>
 
