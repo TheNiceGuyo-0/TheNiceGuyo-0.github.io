@@ -85,24 +85,48 @@
         }
         .menu-toggle {
             display: none;
-            font-size: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 36px;  /* smaller size */
+            height: 28px;
             cursor: pointer;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
+            padding: 0.4rem;
+            border-radius: 8px;
             background: linear-gradient(45deg, #dc2626, #b91c1c);
-            box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
             transition: all 0.3s ease;
         }
 
+        .menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Animation to "X" when active */
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
+
         .menu-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 25px rgba(220, 38, 38, 0.8);
+            transform: scale(1.05);
+            box-shadow: 0 0 18px rgba(220, 38, 38, 0.8);
         }
 
         @media (max-width: 768px) {
             .menu-toggle {
-                display: block;
+                display: flex;
             }
             .nav-menu {
                 display: none;
@@ -128,6 +152,7 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
 
 
         .nav-item a {
@@ -795,12 +820,17 @@
     
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo -->
             <div class="logo">Victor Oyewole</div>
 
-            <!-- Hamburger menu button -->
+            <!-- Hamburger Menu Toggle Button -->
             <div class="menu-toggle" id="menu-toggle">
-                &#9776;
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+
+            <!-- Navigation Menu -->
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="skills.html">Skills and Certificates</a></li>
@@ -810,6 +840,7 @@
             </ul>
         </div>
     </nav>
+
 
     <section id="home" class="hero">
         <div class="floating-elements">
@@ -1332,11 +1363,16 @@
             }
         }
     </script>
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-menu').classList.toggle('show');
+        <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active'); // Animate to "X"
+        navMenu.classList.toggle('show'); // Show menu
     });
     </script>
+
 
 </body>
 </html>
