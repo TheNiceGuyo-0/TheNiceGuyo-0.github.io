@@ -542,10 +542,10 @@
                 font-size: 2.5rem;
             }
             
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+        .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
             
             .nav-menu {
                 display: none;
@@ -627,8 +627,8 @@
             }
 
             .social-link {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
                 background: rgba(255, 255, 255, 0.1);
                 border-radius: 50%;
                 display: flex;
@@ -640,8 +640,8 @@
             }
 
             .social-icon {
-                width: 100%;
-                height: 100%;
+                width: 24px;
+                height: 24px;
                 object-fit: contain;
                 filter: brightness(0) invert(1);
                 transition: all 0.3s ease;
@@ -657,6 +657,35 @@
             .social-link:hover .social-icon {
                 filter: brightness(0) invert(1);
             }
+            .certificate-image {
+    height: 200px; /* Match project image height */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #dc2626, #b91c1c); /* Match project gradient */
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Add the same hover effect as projects */
+.certificate-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.certificate-card:hover .certificate-image::before {
+    left: 100%;
+}
         }
     </style>
 </head>
@@ -794,35 +823,32 @@
         <section id="certificates" class="section">
     <div class="container">
         <h2 class="section-title">Certificates</h2>
-        <div class="certificates-grid">
-            <div class="certificate-card">
-                <div class="certificate-image">
-                    <img src="Professional Foundations.png" alt="ALX Certificate">
-                </div>
-                <div class="certificate-content">
-                    <a href="https://example.com/certificate1.pdf" target="_blank" class="certificate-title-link">
-                        <h3 class="certificate-title">ALX Professional Foundations</h3>
-                    </a>
-                    <p>Issued: August 2025</p>
-                    <div class="certificate-issuer">ALX Africa</div>
-                </div>
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="Professional Foundations.png" alt="ALX Certificate">
             </div>
+            <div class="certificate-content">
+                <a href="https://example.com/certificate1.pdf" target="_blank" class="certificate-title-link">
+                    <h3 class="certificate-title">ALX Professional Foundations</h3>
+                </a>
+                <p>Issued: August 2025</p>
+                <div class="certificate-issuer">ALX Africa</div>
+        </div>
             
-            <div class="certificate-card">
-                <div class="certificate-image">
-                    <img src="python basic.png" alt="Google Certificate">
-                </div>
-                <div class="certificate-content">
-                    <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
-                        <h3 class="certificate-title">Python(Basic)</h3>
-                    </a>
-                    <p>Issued: July 2025</p>
-                    <div class="certificate-issuer">HackerRank</div>
-                </div>
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="python basic.png" alt="Google Certificate">
             </div>
+            <div class="certificate-content">
+                <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
+                        <h3 class="certificate-title">Python(Basic)</h3>
+                </a>
+                <p>Issued: July 2025</p>
+                <div class="certificate-issuer">HackerRank</div>
+            </div>
+        </div>
             
             <!-- Add more certificates as needed -->
-        </div>
     </div>
     </section>
 
