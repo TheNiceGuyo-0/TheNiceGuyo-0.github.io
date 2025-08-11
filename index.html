@@ -394,6 +394,17 @@
             font-weight: bold;
         }
 
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
         .project-image::before {
             content: '';
             position: absolute;
@@ -419,6 +430,114 @@
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: #00ffff;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .project-title-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+        .project-title-link:hover .project-title {
+            color: #dc2626;
+            text-decoration: underline;
+        }
+
+        /* Certificates section - matching project section style */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .certificate-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            position: relative;
+        }
+
+        .certificate-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
+        }
+
+        .certificate-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.1);
+        }
+
+        .certificate-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .certificate-card:hover .certificate-image::before {
+            left: 100%;
+        }
+
+        .certificate-content {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .certificate-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #00ffff;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .certificate-title-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+        .certificate-title-link:hover .certificate-title {
+            color: #dc2626;
+            text-decoration: underline;
+        }
+
+        .certificate-issuer {
+            color: #dc2626;
+            font-weight: bold;
+            margin-top: 0.5rem;
         }
 
         .contact-form {
@@ -515,26 +634,40 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .social-link {
             width: 50px;
             height: 50px;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffffff;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-decoration: none;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
             transition: all 0.3s ease;
         }
 
         .social-link:hover {
             transform: translateY(-5px) scale(1.1);
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
             box-shadow: 0 15px 30px rgba(220, 38, 38, 0.4);
+            border-color: transparent;
+        }
+
+        .social-link:hover .social-icon {
+            filter: brightness(0) invert(1);
         }
 
         @media (max-width: 768px) {
@@ -542,11 +675,11 @@
                 font-size: 2.5rem;
             }
             
-        .about-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+                
             .nav-menu {
                 display: none;
             }
@@ -558,134 +691,14 @@
             .hero-content {
                 padding: 2rem;
             }
-            .project-image {
-                height: 200px;
-                position: relative;
-                overflow: hidden;
+
+            .certificates-grid {
+                grid-template-columns: 1fr;
             }
 
-            .project-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.5s ease;
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
-
-            .project-card:hover .project-image img {
-                transform: scale(1.1);
-            }
-            .project-link {
-                text-decoration: none;
-                color: inherit;
-                display: block;
-                transition: transform 0.3s ease;
-            }
-
-            .project-link:hover {
-                transform: translateY(-5px);
-            }
-
-            .project-link:hover .project-card {
-                box-shadow: 0 25px 50px rgba(220, 38, 38, 0.3);
-            }
-
-            .project-card:hover {
-                transform: none; 
-            }
-            /* Add this to your existing CSS */
-            .project-title-link {
-                text-decoration: none;
-                color: inherit;
-                display: inline-block;
-            }
-
-            .project-title-link:hover .project-title {
-                color: #dc2626;
-                text-decoration: underline;
-            }
-
-            .project-title {
-                transition: color 0.3s ease, text-decoration 0.3s ease;
-                margin-bottom: 0.5rem;
-                color: #00ffff;
-            }
-
-/* Prevent the entire card from being clickable */
-            .project-card {
-                cursor: default;
-            }
-
-            .project-card a {
-                cursor: pointer;
-            }
-
-            .social-links {
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .social-link {
-                width: 40px;
-                height: 40px;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s ease;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                padding: 10px;
-            }
-
-            .social-icon {
-                width: 24px;
-                height: 24px;
-                object-fit: contain;
-                filter: brightness(0) invert(1);
-                transition: all 0.3s ease;
-            }
-
-            .social-link:hover {
-                transform: translateY(-5px) scale(1.1);
-                background: linear-gradient(45deg, #dc2626, #b91c1c);
-                box-shadow: 0 15px 30px rgba(220, 38, 38, 0.4);
-                border-color: transparent;
-            }
-
-            .social-link:hover .social-icon {
-                filter: brightness(0) invert(1);
-            }
-            .certificate-image {
-    height: 200px; /* Match project image height */
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(45deg, #dc2626, #b91c1c); /* Match project gradient */
-}
-
-.certificate-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-/* Add the same hover effect as projects */
-.certificate-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.certificate-card:hover .certificate-image::before {
-    left: 100%;
-}
         }
     </style>
 </head>
@@ -701,6 +714,7 @@
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#skills">Skills</a></li>
                 <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#certificates">Certificates</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -742,7 +756,7 @@
                 </div>
                 <div class="about-image">
                     <div class="profile-placeholder">
-                        <img src=meme.jpg alt="Victor Oyewole Photo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                        <img src="meme.jpg" alt="Victor Oyewole Photo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
                     </div>
                 </div>
             </div>
@@ -785,71 +799,50 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="diamond.jpeg" alt="Project 1" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <div class="project-content">
-                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
-                    <h3 class="project-title">Diamond Price Analyzer</h3>
-                    </a>
-                    <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
-                </div>
-            </div>
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/b91c1c/ffffff?text=Project+2" alt="Project 2" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <div class="project-content">
-                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
-                    <h3 class="project-title">Portfolio Dashboard</h3>
-                    </a>
-                    <p>Interactive analytics dashboard with D3.js visualization</p>
+                        <img src="diamond.jpeg" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
+                            <h3 class="project-title">Diamond Price Analyzer</h3>
+                        </a>
+                        <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/991b1b/ffffff?text=Project+3" alt="Project 3" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <div class="project-content">
-                    <a href="https://github.com/TheNiceGuyo-0/Diamond-Analysis" target="_blank" class="project-title-link">
-                     <h3 class="project-title">Mobile App UI</h3>
-                    </a>
-                     <p>Fitness tracking app UI designed in Figma and implemented with React Native</p>
-                </div>
-                </div>
-            </div>
-        </div> -->
+        </div>
     </section>
 
-        <section id="certificates" class="section">
-    <div class="container">
-        <h2 class="section-title">Certificates</h2>
-        <div class="certificate-card">
-            <div class="certificate-image">
-                <img src="Professional Foundations.png" alt="ALX Certificate">
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Professional Foundations.png" alt="ALX Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <a href="https://savanna.alxafrica.com/certificates/Lp6fEmCe79?utm_campaign=53995757-ALX%20-%202025%20-%20TR%20-%20PF%20C0&utm_medium=email&_hsmi=104714207&utm_content=104714207&utm_source=hs_email" target="_blank" class="certificate-title-link">
+                            <h3 class="certificate-title">ALX Professional Foundations</h3>
+                        </a>
+                        <p>Issued: August 2025</p>
+                        <div class="certificate-issuer">ALX Africa</div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="python basic.png" alt="HackerRank Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
+                            <h3 class="certificate-title">Python(Basic)</h3>
+                        </a>
+                        <p>Issued: July 2025</p>
+                        <div class="certificate-issuer">HackerRank</div>
+                    </div>
+                </div>
             </div>
-            <div class="certificate-content">
-                <a href="https://example.com/certificate1.pdf" target="_blank" class="certificate-title-link">
-                    <h3 class="certificate-title">ALX Professional Foundations</h3>
-                </a>
-                <p>Issued: August 2025</p>
-                <div class="certificate-issuer">ALX Africa</div>
         </div>
-            
-        <div class="certificate-card">
-            <div class="certificate-image">
-                <img src="python basic.png" alt="Google Certificate">
-            </div>
-            <div class="certificate-content">
-                <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
-                        <h3 class="certificate-title">Python(Basic)</h3>
-                </a>
-                <p>Issued: July 2025</p>
-                <div class="certificate-issuer">HackerRank</div>
-            </div>
-        </div>
-            
-            <!-- Add more certificates as needed -->
-    </div>
     </section>
 
     <section id="contact" class="section">
@@ -870,7 +863,6 @@
         </div>
     </section>
 
-
     <footer class="footer">
         <div class="social-links">
             <a href="https://x.com/TheNiceGuy_0_o" target="_blank" class="social-link">
@@ -882,7 +874,7 @@
             <a href="https://github.com/TheNiceGuyo-0" target="_blank" class="social-link">
                 <img src="Octicons-mark-github.svg" alt="GitHub" class="social-icon">
             </a>
-            <a href="victor.oy17@gmail.com" class="social-link">
+            <a href="mailto:victor.oy17@gmail.com" class="social-link">
                 <img src="Gmail_icon_(2020).svg" alt="Email" class="social-icon">
             </a>
         </div>
@@ -1152,7 +1144,7 @@
         }, observerOptions);
 
         // Observe all animatable elements
-        document.querySelectorAll('.section-title, .about-text, .about-image, .skill-card, .project-card, .contact-form').forEach(el => {
+        document.querySelectorAll('.section-title, .about-text, .about-image, .skill-card, .project-card, .certificate-card, .contact-form').forEach(el => {
             observer.observe(el);
         });
 
@@ -1165,6 +1157,12 @@
         // Stagger animation for project cards
         const projectCards = document.querySelectorAll('.project-card');
         projectCards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.2}s`;
+        });
+
+        // Stagger animation for certificate cards
+        const certificateCards = document.querySelectorAll('.certificate-card');
+        certificateCards.forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.2}s`;
         });
 
@@ -1188,7 +1186,7 @@
         });
 
         // Interactive hover effects
-        document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+        document.querySelectorAll('.skill-card, .project-card, .certificate-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-15px) scale(1.05)';
             });
