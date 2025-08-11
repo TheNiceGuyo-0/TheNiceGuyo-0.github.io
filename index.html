@@ -618,6 +618,45 @@
             .project-card a {
                 cursor: pointer;
             }
+
+            .social-links {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .social-link {
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 10px;
+            }
+
+            .social-icon {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                filter: brightness(0) invert(1);
+                transition: all 0.3s ease;
+            }
+
+            .social-link:hover {
+                transform: translateY(-5px) scale(1.1);
+                background: linear-gradient(45deg, #dc2626, #b91c1c);
+                box-shadow: 0 15px 30px rgba(220, 38, 38, 0.4);
+                border-color: transparent;
+            }
+
+            .social-link:hover .social-icon {
+                filter: brightness(0) invert(1);
+            }
         }
     </style>
 </head>
@@ -726,7 +765,7 @@
                     <p>A comprehensive machine learning tool for analyzing and predicting diamond prices using the famous diamonds dataset. This project provides data exploration, visualization, model training, and price prediction capabilities with model persistence features.</p>
                 </div>
             </div>
-            <div class="project-card">
+            <!-- <div class="project-card">
                 <div class="project-image">
                     <img src="https://via.placeholder.com/600x400/b91c1c/ffffff?text=Project+2" alt="Project 2" style="width:100%; height:100%; object-fit:cover;">
                 </div>
@@ -749,7 +788,42 @@
                 </div>
                 </div>
             </div>
+        </div> -->
+    </section>
+
+        <section id="certificates" class="section">
+    <div class="container">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <div class="certificate-image">
+                    <img src="Professional Foundations.png" alt="ALX Certificate">
+                </div>
+                <div class="certificate-content">
+                    <a href="https://example.com/certificate1.pdf" target="_blank" class="certificate-title-link">
+                        <h3 class="certificate-title">ALX Professional Foundations</h3>
+                    </a>
+                    <p>Issued: August 2025</p>
+                    <div class="certificate-issuer">ALX Africa</div>
+                </div>
+            </div>
+            
+            <div class="certificate-card">
+                <div class="certificate-image">
+                    <img src="python basic.png" alt="Google Certificate">
+                </div>
+                <div class="certificate-content">
+                    <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
+                        <h3 class="certificate-title">Python(Basic)</h3>
+                    </a>
+                    <p>Issued: July 2025</p>
+                    <div class="certificate-issuer">HackerRank</div>
+                </div>
+            </div>
+            
+            <!-- Add more certificates as needed -->
         </div>
+    </div>
     </section>
 
     <section id="contact" class="section">
@@ -772,14 +846,19 @@
 
 
     <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link">📧</a>
-                <a href="#" class="social-link">💼</a>
-                <a href="#" class="social-link">🐙</a>
-                <a href="#" class="social-link">🐦</a>
-            </div>
-            <p>&copy; 2025 TheNiceGuy. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://x.com/TheNiceGuy_0_o" target="_blank" class="social-link">
+                <img src="Logo_of_Twitter.svg" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/victor-oyewole-504751218/" target="_blank" class="social-link">
+                <img src="LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/TheNiceGuyo-0" target="_blank" class="social-link">
+                <img src="Octicons-mark-github.svg" alt="GitHub" class="social-icon">
+            </a>
+            <a href="victor.oy17@gmail.com" class="social-link">
+                <img src="Gmail_icon_(2020).svg" alt="Email" class="social-icon">
+            </a>
         </div>
     </footer>
 
