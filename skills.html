@@ -14,12 +14,18 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #0d1117; /* Updated to deep navy */
+            background: #0d1117;
             min-height: 100vh;
             padding: 2rem;
             color: #ffffff;
-            cursor: none;
             overflow-x: hidden;
+        }
+
+        /* Hide cursor on mobile devices */
+        @media (hover: hover) {
+            body {
+                cursor: none;
+            }
         }
 
         #three-background {
@@ -38,9 +44,16 @@
             position: fixed;
             pointer-events: none;
             z-index: 9999;
-            background: radial-gradient(circle, #2563eb, #ffffff); /* Updated to blue */
+            background: radial-gradient(circle, #2563eb, #ffffff);
             mix-blend-mode: difference;
             transition: transform 0.2s ease;
+        }
+
+        /* Hide cursor on touch devices */
+        @media (hover: none) {
+            .cursor {
+                display: none;
+            }
         }
 
         .navbar {
@@ -48,7 +61,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(13, 17, 23, 0.9); /* Updated */
+            background: rgba(13, 17, 23, 0.9);
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
@@ -67,7 +80,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #2563eb, #3b82f6); /* Updated to blue */
+            background: linear-gradient(45deg, #2563eb, #3b82f6);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -78,16 +91,18 @@
             color: #ffffff;
             text-decoration: none;
             padding: 0.5rem 1.5rem;
-            border: 2px solid #2563eb; /* Updated to blue */
+            border: 2px solid #2563eb;
             border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 500;
+            display: inline-block;
         }
 
-        .back-btn:hover {
-            background: #2563eb; /* Updated to blue */
+        .back-btn:hover, .back-btn:focus {
+            background: #2563eb;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4); /* Updated to blue */
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+            outline: none;
         }
 
         .skills-container {
@@ -97,7 +112,7 @@
             backdrop-filter: blur(15px);
             border-radius: 20px;
             padding: 3rem;
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); /* Updated to blue */
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -109,12 +124,12 @@
         .skills-header h2 {
             font-size: 3rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #3b82f6, #93c5fd, #2563eb); /* Updated */
+            background: linear-gradient(45deg, #3b82f6, #93c5fd, #2563eb);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5); /* Updated to blue */
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
         }
 
         .skills-header p {
@@ -151,17 +166,23 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #2563eb, #1d4ed8); /* Updated to blue */
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2); /* Updated to blue */
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2);
         }
 
-        .skill-category:hover::before {
+        .skill-category:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2);
+        }
+
+        .skill-category:hover::before, 
+        .skill-category:focus-within::before {
             transform: scaleX(1);
         }
 
@@ -174,7 +195,7 @@
         .skill-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Updated to blue */
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -182,7 +203,7 @@
             margin-right: 1rem;
             font-size: 24px;
             color: white;
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); /* Updated to blue */
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
         }
 
         .skill-category h3 {
@@ -198,8 +219,8 @@
         }
 
         .skill-item {
-            background: rgba(37, 99, 235, 0.1); /* Updated to blue */
-            color: #3b82f6; /* Updated to blue */
+            background: rgba(37, 99, 235, 0.1);
+            color: #3b82f6;
             padding: 0.6rem 1.2rem;
             border-radius: 25px;
             font-size: 0.9rem;
@@ -209,11 +230,12 @@
             cursor: default;
         }
 
-        .skill-item:hover {
-            background: rgba(37, 99, 235, 0.2); /* Updated to blue */
-            border-color: #2563eb; /* Updated to blue */
+        .skill-item:hover, .skill-item:focus {
+            background: rgba(37, 99, 235, 0.2);
+            border-color: #2563eb;
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); /* Updated to blue */
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+            outline: none;
         }
 
         .proficiency-label {
@@ -233,10 +255,10 @@
 
         .proficiency-fill {
             height: 100%;
-            background: linear-gradient(90deg, #2563eb, #1d4ed8); /* Updated to blue */
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
             border-radius: 3px;
             transition: width 0.8s ease;
-            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5); /* Updated to blue */
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
         }
 
         .proficiency-indicator {
@@ -248,12 +270,12 @@
         }
 
         .certifications-section {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Updated to blue */
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             border-radius: 15px;
             padding: 2rem;
             color: white;
             margin-top: 2rem;
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4); /* Updated to blue */
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
         }
 
         .certifications-section h3 {
@@ -283,9 +305,10 @@
             transition: all 0.3s ease;
         }
 
-        .cert-item:hover {
+        .cert-item:hover, .cert-item:focus-within {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            outline: none;
         }
 
         .cert-title {
@@ -312,13 +335,14 @@
             transition: width 0.3s ease;
         }
 
-        .cert-title a:hover {
+        .cert-title a:hover, .cert-title a:focus {
             color: #ffffff;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             transform: translateX(5px);
+            outline: none;
         }
 
-        .cert-title a:hover::after {
+        .cert-title a:hover::after, .cert-title a:focus::after {
             width: 100%;
         }
 
@@ -336,13 +360,21 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
             .skills-container {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
                 margin-top: 5rem;
             }
 
             .skills-header h2 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .skills-header p {
+                font-size: 1rem;
             }
 
             .skills-grid {
@@ -352,6 +384,21 @@
 
             .skill-category {
                 padding: 1.5rem;
+            }
+            
+            .skill-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .skill-category h3 {
+                font-size: 1.3rem;
+            }
+            
+            .skill-item {
+                padding: 0.7rem 1rem;
+                font-size: 0.85rem;
             }
 
             .navbar {
@@ -363,12 +410,48 @@
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
             .back-btn {
                 padding: 0.4rem 1rem;
                 font-size: 0.9rem;
+            }
+            
+            .certifications-section {
+                padding: 1.5rem;
+            }
+            
+            .certifications-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .proficiency-label {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .skills-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .skill-item {
+                padding: 0.6rem 0.9rem;
+                font-size: 0.8rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .back-btn {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -580,6 +663,13 @@
         let mouseX = 0, mouseY = 0;
         let windowHalfX = window.innerWidth / 2;
         let windowHalfY = window.innerHeight / 2;
+        
+        // Check if mobile device
+        const isMobile = window.innerWidth <= 768;
+        
+        // Performance optimizations
+        const particleCount = isMobile ? 300 : 800;
+        const floatingObjectsCount = isMobile ? 8 : 15;
 
         function initThreeJS() {
             scene = new THREE.Scene();
@@ -589,9 +679,11 @@
             renderer = new THREE.WebGLRenderer({ 
                 canvas: document.getElementById('three-background'),
                 alpha: true,
-                antialias: true
+                antialias: !isMobile, // Disable antialiasing on mobile
+                powerPreference: "low-power" // Save battery
             });
             renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio > 1 && !isMobile ? 2 : 1); // Lower pixel ratio on mobile
             renderer.setClearColor(0x000000, 0);
 
             createFloatingObjects();
@@ -605,12 +697,12 @@
             const objects = [];
             const geometries = [
                 new THREE.BoxGeometry(20, 20, 20),
-                new THREE.SphereGeometry(15, 16, 16),
+                new THREE.SphereGeometry(15, isMobile ? 8 : 16, isMobile ? 8 : 16),
                 new THREE.OctahedronGeometry(18),
-                new THREE.TorusGeometry(15, 5, 8, 16)
+                new THREE.TorusGeometry(15, 5, isMobile ? 6 : 8, isMobile ? 12 : 16)
             ];
 
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < floatingObjectsCount; i++) {
                 const geometry = geometries[Math.floor(Math.random() * geometries.length)];
                 
                 // Updated to blue color palette
@@ -655,7 +747,6 @@
         }
 
         function createParticleSystem() {
-            const particleCount = 1000;
             const particles = new THREE.BufferGeometry();
             const positions = new Float32Array(particleCount * 3);
             const colors = new Float32Array(particleCount * 3);
@@ -683,7 +774,7 @@
             particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
             const material = new THREE.PointsMaterial({
-                size: 3,
+                size: isMobile ? 2 : 3,
                 transparent: true,
                 opacity: 0.6,
                 vertexColors: true,
@@ -699,9 +790,9 @@
             geometryGroup = new THREE.Group();
 
             // Central structure in blue
-            const torusGeometry = new THREE.TorusKnotGeometry(100, 30, 100, 16);
+            const torusGeometry = new THREE.TorusKnotGeometry(100, 30, isMobile ? 50 : 100, isMobile ? 8 : 16);
             const torusMaterial = new THREE.MeshBasicMaterial({
-                color: 0x2563eb, // Primary blue
+                color: 0x2563eb,
                 wireframe: true,
                 transparent: true,
                 opacity: 0.4
@@ -710,7 +801,7 @@
             geometryGroup.add(torus);
 
             // Orbiting cubes in blue/white
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < (isMobile ? 6 : 8); i++) {
                 const cubeGeometry = new THREE.BoxGeometry(30, 30, 30);
                 
                 let cubeColor;
@@ -779,14 +870,17 @@
             renderer.render(scene, camera);
         }
 
-        document.addEventListener('mousemove', (event) => {
-            mouseX = (event.clientX - windowHalfX) * 0.5;
-            mouseY = (event.clientY - windowHalfY) * 0.5;
-            
-            const cursor = document.getElementById('cursor');
-            cursor.style.left = event.clientX + 'px';
-            cursor.style.top = event.clientY + 'px';
-        });
+        // Only track mouse if not on mobile
+        if (!isMobile) {
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX - windowHalfX) * 0.5;
+                mouseY = (event.clientY - windowHalfY) * 0.5;
+                
+                const cursor = document.getElementById('cursor');
+                cursor.style.left = event.clientX + 'px';
+                cursor.style.top = event.clientY + 'px';
+            });
+        }
 
         window.addEventListener('resize', () => {
             windowHalfX = window.innerWidth / 2;
@@ -798,6 +892,7 @@
 
         window.addEventListener('load', initThreeJS);
 
+        // Intersection observer for proficiency bars
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -807,12 +902,13 @@
                     });
                 }
             });
-        });
+        }, { threshold: 0.1 }); // Trigger when 10% visible
 
         document.querySelectorAll('.skill-category').forEach(category => {
             observer.observe(category);
         });
 
+        // Add CSS animation for bars
         const style = document.createElement('style');
         style.textContent = `
             @keyframes fillBar {
@@ -822,12 +918,14 @@
         `;
         document.head.appendChild(style);
 
+        // Set initial state for bars
         document.querySelectorAll('.proficiency-fill').forEach(bar => {
             const width = bar.style.width;
             bar.style.setProperty('--target-width', width);
             bar.style.width = '0%';
         });
 
+        // Animate skill categories on load
         document.querySelectorAll('.skill-category').forEach((category, index) => {
             category.style.opacity = '0';
             category.style.transform = 'translateY(30px)';
