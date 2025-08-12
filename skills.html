@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #0a0a0a;
+            background: #0d1117; /* Updated to deep navy */
             min-height: 100vh;
             padding: 2rem;
             color: #ffffff;
@@ -38,7 +38,7 @@
             position: fixed;
             pointer-events: none;
             z-index: 9999;
-            background: radial-gradient(circle, #dc2626, #ffffff);
+            background: radial-gradient(circle, #2563eb, #ffffff); /* Updated to blue */
             mix-blend-mode: difference;
             transition: transform 0.2s ease;
         }
@@ -48,7 +48,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(13, 17, 23, 0.9); /* Updated */
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
@@ -67,7 +67,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #dc2626, #ffffff);
+            background: linear-gradient(45deg, #2563eb, #3b82f6); /* Updated to blue */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -78,16 +78,16 @@
             color: #ffffff;
             text-decoration: none;
             padding: 0.5rem 1.5rem;
-            border: 2px solid #dc2626;
+            border: 2px solid #2563eb; /* Updated to blue */
             border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 500;
         }
 
         .back-btn:hover {
-            background: #dc2626;
+            background: #2563eb; /* Updated to blue */
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4); /* Updated to blue */
         }
 
         .skills-container {
@@ -97,7 +97,7 @@
             backdrop-filter: blur(15px);
             border-radius: 20px;
             padding: 3rem;
-            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); /* Updated to blue */
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -109,12 +109,12 @@
         .skills-header h2 {
             font-size: 3rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #dc2626, #ffffff, #b91c1c);
+            background: linear-gradient(45deg, #3b82f6, #93c5fd, #2563eb); /* Updated */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5); /* Updated to blue */
         }
 
         .skills-header p {
@@ -151,14 +151,14 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #dc2626, #b91c1c);
+            background: linear-gradient(90deg, #2563eb, #1d4ed8); /* Updated to blue */
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2); /* Updated to blue */
         }
 
         .skill-category:hover::before {
@@ -174,7 +174,7 @@
         .skill-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Updated to blue */
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -182,7 +182,7 @@
             margin-right: 1rem;
             font-size: 24px;
             color: white;
-            box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); /* Updated to blue */
         }
 
         .skill-category h3 {
@@ -198,8 +198,8 @@
         }
 
         .skill-item {
-            background: rgba(220, 38, 38, 0.1);
-            color: #dc2626;
+            background: rgba(37, 99, 235, 0.1); /* Updated to blue */
+            color: #3b82f6; /* Updated to blue */
             padding: 0.6rem 1.2rem;
             border-radius: 25px;
             font-size: 0.9rem;
@@ -210,10 +210,10 @@
         }
 
         .skill-item:hover {
-            background: rgba(220, 38, 38, 0.2);
-            border-color: #dc2626;
+            background: rgba(37, 99, 235, 0.2); /* Updated to blue */
+            border-color: #2563eb; /* Updated to blue */
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); /* Updated to blue */
         }
 
         .proficiency-label {
@@ -233,10 +233,10 @@
 
         .proficiency-fill {
             height: 100%;
-            background: linear-gradient(90deg, #dc2626, #b91c1c);
+            background: linear-gradient(90deg, #2563eb, #1d4ed8); /* Updated to blue */
             border-radius: 3px;
             transition: width 0.8s ease;
-            box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5); /* Updated to blue */
         }
 
         .proficiency-indicator {
@@ -248,12 +248,12 @@
         }
 
         .certifications-section {
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Updated to blue */
             border-radius: 15px;
             padding: 2rem;
             color: white;
             margin-top: 2rem;
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4); /* Updated to blue */
         }
 
         .certifications-section h3 {
@@ -576,21 +576,16 @@
     </div>
 
     <script>
-        // Three.js Scene Setup
         let scene, camera, renderer, particles, geometryGroup;
         let mouseX = 0, mouseY = 0;
         let windowHalfX = window.innerWidth / 2;
         let windowHalfY = window.innerHeight / 2;
 
         function initThreeJS() {
-            // Scene
             scene = new THREE.Scene();
-            
-            // Camera
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
             camera.position.z = 1000;
 
-            // Renderer
             renderer = new THREE.WebGLRenderer({ 
                 canvas: document.getElementById('three-background'),
                 alpha: true,
@@ -599,12 +594,10 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
 
-            // Create floating 3D objects
             createFloatingObjects();
             createParticleSystem();
             createGeometricShapes();
 
-            // Animation loop
             animate();
         }
 
@@ -620,12 +613,12 @@
             for (let i = 0; i < 15; i++) {
                 const geometry = geometries[Math.floor(Math.random() * geometries.length)];
                 
-                // Professional red, white, and dark red color palette for 3D objects
+                // Updated to blue color palette
                 const colors = [
-                    new THREE.Color(0xdc2626), // Professional red
-                    new THREE.Color(0xb91c1c), // Darker red
+                    new THREE.Color(0x2563eb), // Primary blue
+                    new THREE.Color(0x1d4ed8), // Darker blue
                     new THREE.Color(0xffffff), // White
-                    new THREE.Color(0x991b1b)  // Deep red
+                    new THREE.Color(0x1e3a8a)  // Deep blue
                 ];
                 
                 const material = new THREE.MeshBasicMaterial({
@@ -672,12 +665,12 @@
                 positions[i + 1] = (Math.random() - 0.5) * 2000;
                 positions[i + 2] = (Math.random() - 0.5) * 1000;
 
-                // Professional red, white, and black particle colors
+                // Updated to blue color palette
                 const colorChoices = [
-                    new THREE.Color(0xdc2626), // Professional red
+                    new THREE.Color(0x2563eb), // Primary blue
                     new THREE.Color(0xffffff), // White
-                    new THREE.Color(0xb91c1c), // Darker red
-                    new THREE.Color(0x666666)  // Light gray for subtle contrast
+                    new THREE.Color(0x1d4ed8), // Darker blue
+                    new THREE.Color(0x94a3b8)  // Light gray
                 ];
                 
                 const chosenColor = colorChoices[Math.floor(Math.random() * colorChoices.length)];
@@ -705,10 +698,10 @@
         function createGeometricShapes() {
             geometryGroup = new THREE.Group();
 
-            // Central rotating structure - using professional red
+            // Central structure in blue
             const torusGeometry = new THREE.TorusKnotGeometry(100, 30, 100, 16);
             const torusMaterial = new THREE.MeshBasicMaterial({
-                color: 0xdc2626, // Professional red
+                color: 0x2563eb, // Primary blue
                 wireframe: true,
                 transparent: true,
                 opacity: 0.4
@@ -716,18 +709,17 @@
             const torus = new THREE.Mesh(torusGeometry, torusMaterial);
             geometryGroup.add(torus);
 
-            // Orbiting cubes using red, white, and dark red palette
+            // Orbiting cubes in blue/white
             for (let i = 0; i < 8; i++) {
                 const cubeGeometry = new THREE.BoxGeometry(30, 30, 30);
                 
-                // Create professional color progression
                 let cubeColor;
                 if (i % 3 === 0) {
-                    cubeColor = 0xdc2626; // Professional red
+                    cubeColor = 0x2563eb; // Primary blue
                 } else if (i % 3 === 1) {
                     cubeColor = 0xffffff; // White
                 } else {
-                    cubeColor = 0xb91c1c; // Darker red
+                    cubeColor = 0x1d4ed8; // Darker blue
                 }
                 
                 const cubeMaterial = new THREE.MeshBasicMaterial({
@@ -755,7 +747,6 @@
         function animate() {
             requestAnimationFrame(animate);
 
-            // Rotate floating objects
             if (window.floatingObjects) {
                 window.floatingObjects.forEach(obj => {
                     obj.rotation.x += obj.userData.rotationSpeed.x;
@@ -764,26 +755,23 @@
                 });
             }
 
-            // Animate particle system
             if (window.particleSystem) {
                 window.particleSystem.rotation.y += 0.001;
                 window.particleSystem.rotation.x += 0.0005;
             }
 
-            // Animate geometric shapes
             if (geometryGroup) {
                 geometryGroup.rotation.x += 0.005;
                 geometryGroup.rotation.y += 0.01;
                 
                 geometryGroup.children.forEach((child, index) => {
-                    if (index > 0) { // Skip the torus
+                    if (index > 0) {
                         child.rotation.x += 0.02;
                         child.rotation.y += 0.03;
                     }
                 });
             }
 
-            // Mouse interaction
             camera.position.x += (mouseX - camera.position.x) * 0.05;
             camera.position.y += (-mouseY - camera.position.y) * 0.05;
             camera.lookAt(scene.position);
@@ -791,18 +779,15 @@
             renderer.render(scene, camera);
         }
 
-        // Mouse movement handler
         document.addEventListener('mousemove', (event) => {
             mouseX = (event.clientX - windowHalfX) * 0.5;
             mouseY = (event.clientY - windowHalfY) * 0.5;
             
-            // Update custom cursor
             const cursor = document.getElementById('cursor');
             cursor.style.left = event.clientX + 'px';
             cursor.style.top = event.clientY + 'px';
         });
 
-        // Window resize handler
         window.addEventListener('resize', () => {
             windowHalfX = window.innerWidth / 2;
             windowHalfY = window.innerHeight / 2;
@@ -811,10 +796,8 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // Initialize Three.js when page loads
         window.addEventListener('load', initThreeJS);
 
-        // Add animation when skills section comes into view
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -826,12 +809,10 @@
             });
         });
 
-        // Observe skill categories
         document.querySelectorAll('.skill-category').forEach(category => {
             observer.observe(category);
         });
 
-        // Add CSS animation for proficiency bars
         const style = document.createElement('style');
         style.textContent = `
             @keyframes fillBar {
@@ -841,14 +822,12 @@
         `;
         document.head.appendChild(style);
 
-        // Set target widths for animation
         document.querySelectorAll('.proficiency-fill').forEach(bar => {
             const width = bar.style.width;
             bar.style.setProperty('--target-width', width);
             bar.style.width = '0%';
         });
 
-        // Add staggered animation for skill categories
         document.querySelectorAll('.skill-category').forEach((category, index) => {
             category.style.opacity = '0';
             category.style.transform = 'translateY(30px)';

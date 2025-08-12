@@ -14,11 +14,11 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #0a0a0a;
+            background: #0d1117; /* Updated to deep navy */
             color: #ffffff;
             overflow-x: hidden;
             line-height: 1.6;
-            cursor: none; /* Hide the default cursor since we have a custom one */
+            cursor: none;
         }
 
         .cursor {
@@ -28,7 +28,7 @@
             position: fixed;
             pointer-events: none;
             z-index: 9999;
-            background: radial-gradient(circle, #dc2626, #ffffff);
+            background: radial-gradient(circle, #2563eb, #ffffff); /* Updated to blue */
             mix-blend-mode: difference;
             transition: transform 0.2s ease;
         }
@@ -46,7 +46,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(13, 17, 23, 0.9); /* Updated to match background */
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
@@ -66,7 +66,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #dc2626, #ffffff);
+            background: linear-gradient(45deg, #2563eb, #3b82f6); /* Updated to blue */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -74,8 +74,8 @@
         }
 
         @keyframes glow {
-            from { filter: drop-shadow(0 0 5px #dc2626); }
-            to { filter: drop-shadow(0 0 20px #b91c1c); }
+            from { filter: drop-shadow(0 0 5px #2563eb); } /* Updated to blue */
+            to { filter: drop-shadow(0 0 20px #1d4ed8); } /* Updated to blue */
         }
 
         .nav-menu {
@@ -89,13 +89,13 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
-            width: 36px;  /* smaller size */
+            width: 36px;
             height: 28px;
             cursor: pointer;
             padding: 0.4rem;
             border-radius: 8px;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
-            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
+            box-shadow: 0 0 12px rgba(37, 99, 235, 0.6); /* Updated to blue */
             transition: all 0.3s ease;
         }
 
@@ -108,7 +108,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Animation to "X" when active */
         .menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(4px, 4px);
         }
@@ -121,7 +120,7 @@
 
         .menu-toggle:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(220, 38, 38, 0.8);
+            box-shadow: 0 0 18px rgba(37, 99, 235, 0.8); /* Updated to blue */
         }
 
         @media (max-width: 768px) {
@@ -132,7 +131,7 @@
                 display: none;
                 flex-direction: column;
                 gap: 1rem;
-                background: rgba(10, 10, 10, 0.95);
+                background: rgba(13, 17, 23, 0.95); /* Updated */
                 position: absolute;
                 top: 70px;
                 right: 20px;
@@ -153,8 +152,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-
-
         .nav-item a {
             color: #ffffff;
             text-decoration: none;
@@ -168,7 +165,7 @@
         .nav-item a:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); /* Updated to blue */
         }
 
         .hero {
@@ -195,12 +192,12 @@
         .hero-title {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #dc2626, #ffffff, #b91c1c);
+            background: linear-gradient(45deg, #3b82f6, #93c5fd, #2563eb); /* Updated to blue */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: slideInDown 1s ease-out;
-            text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5); /* Updated to blue */
         }
 
         @keyframes slideInDown {
@@ -235,7 +232,7 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
@@ -263,7 +260,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4); /* Updated to blue */
         }
 
         .section {
@@ -283,7 +280,7 @@
             font-size: 3rem;
             text-align: center;
             margin-bottom: 3rem;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -338,7 +335,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -346,7 +343,7 @@
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 50px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 0 50px rgba(37, 99, 235, 0.3); /* Updated to blue */
         }
 
         .profile-placeholder::before {
@@ -393,7 +390,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.1));
+            background: linear-gradient(45deg, rgba(37, 99, 235, 0.1), rgba(29, 78, 216, 0.1)); /* Updated */
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -409,13 +406,13 @@
 
         .skill-card:hover {
             transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2); /* Updated to blue */
         }
 
         .skill-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -425,16 +422,15 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive */
-            gap: 2rem; /* space between cards */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         @media (min-width: 768px) {
             .projects-grid {
-                grid-template-columns: repeat(2, 1fr); /* exactly 2 columns on larger screens */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-
 
         .project-card {
             background: rgba(255, 255, 255, 0.03);
@@ -455,12 +451,12 @@
 
         .project-card:hover {
             transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(255, 0, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2); /* Updated to blue */
         }
 
         .project-image {
             height: 200px;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -506,7 +502,7 @@
         .project-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: #ff0000;
+            color: #3b82f6; /* Updated to blue */
             transition: color 0.3s ease, text-decoration 0.3s ease;
         }
 
@@ -517,11 +513,10 @@
         }
 
         .project-title-link:hover .project-title {
-            color: #dc2626;
+            color: #2563eb; /* Updated to blue */
             text-decoration: underline;
         }
 
-        /* Certificates section - matching project section style */
         .certificates-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -548,14 +543,14 @@
 
         .certificate-card:hover {
             transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2); /* Updated to blue */
         }
 
         .certificate-image {
             height: 200px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -596,7 +591,7 @@
         .certificate-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: #ff0000;
+            color: #3b82f6; /* Updated to blue */
             transition: color 0.3s ease, text-decoration 0.3s ease;
         }
 
@@ -607,12 +602,12 @@
         }
 
         .certificate-title-link:hover .certificate-title {
-            color: #dc2626;
+            color: #2563eb; /* Updated to blue */
             text-decoration: underline;
         }
 
         .certificate-issuer {
-            color: #dc2626;
+            color: #2563eb; /* Updated to blue */
             font-weight: bold;
             margin-top: 0.5rem;
         }
@@ -655,8 +650,8 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #dc2626;
-            box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+            border-color: #2563eb; /* Updated to blue */
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.3); /* Updated to blue */
             background: rgba(255, 255, 255, 0.08);
         }
 
@@ -668,7 +663,7 @@
         .submit-button {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
             color: #ffffff;
             border: none;
             border-radius: 50px;
@@ -697,11 +692,11 @@
 
         .submit-button:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4); /* Updated to blue */
         }
 
         .footer {
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(13, 17, 23, 0.9); /* Updated */
             padding: 2rem 0;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -736,18 +731,17 @@
             transition: all 0.3s ease;
         }
 
-        /* Special handling for LinkedIn icon */
         .social-link .linkedin-icon {
-            filter: none; /* Remove the white filter */
-            background: #b50000; /* LinkedIn brand blue */
+            filter: none;
+            background: #0a66c2; /* LinkedIn blue */
             border-radius: 2px;
             padding: 2px;
         }
 
         .social-link:hover {
             transform: translateY(-5px) scale(1.1);
-            background: linear-gradient(45deg, #dc2626, #b91c1c);
-            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.4);
+            background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Updated to blue */
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4); /* Updated to blue */
             border-color: transparent;
         }
 
@@ -755,7 +749,6 @@
             filter: brightness(0) invert(1);
         }
 
-        /* Keep LinkedIn icon visible on hover */
         .social-link:hover .linkedin-icon {
             filter: none;
             background: #ffffff;
@@ -793,13 +786,12 @@
             .tagline {
             font-size: 1.8rem;
             font-weight: 500;
-            background: linear-gradient(45deg, #dc2626, #ffffff, #b91c1c);
-            background-clip: text;               /* Standard property */
-            -webkit-background-clip: text;       /* WebKit browsers */
+            background: linear-gradient(45deg, #3b82f6, #93c5fd, #2563eb); /* Updated */
+            background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fadeInTagline 1.5s ease-out 0.5s both;
             }
-
 
             @keyframes fadeInTagline {
                 from {
@@ -820,17 +812,12 @@
     
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo -->
             <div class="logo">Victor Oyewole</div>
-
-            <!-- Hamburger Menu Toggle Button -->
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
-            <!-- Navigation Menu -->
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="skills.html">Skills and Certificates</a></li>
@@ -840,7 +827,6 @@
             </ul>
         </div>
     </nav>
-
 
     <section id="home" class="hero">
         <div class="floating-elements">
@@ -858,7 +844,6 @@
             <h1 class="hero-title">Creative Developer and Analyst</h1>
             <p class="hero-subtitle tagline">Where technology meets creativity.</p>
         </div>
-
     </section>
 
     <section id="about" class="section">
@@ -866,12 +851,12 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I’m Victor Oyewole, a resourceful Computer Science graduate with a passion for building innovative, 
+                    <p>I'm Victor Oyewole, a resourceful Computer Science graduate with a passion for building innovative, 
                         user-focused solutions. With hands-on expertise in Python development, data analytics, and creative video editing,
                          I bridge the gap between technical problem-solving and engaging storytelling. My experience includes delivering data-driven 
                          insights using Python, SQL, and visualization tools, as well as crafting compelling video content that aligns with brand strategies.
                          Beyond my technical and creative work, I bring strong skills in virtual assistance, project coordination, and web design, making me a 
-                         versatile contributor in dynamic environments. I’m constantly learning currently deepening my expertise in data science, cloud technologies, 
+                         versatile contributor in dynamic environments. I'm constantly learning currently deepening my expertise in data science, cloud technologies, 
                          and advanced analytics while staying committed to creating solutions that are as functional as they are impactful.</p>
                     <p>When I'm not coding, you'll find me exploring emerging technologies, crafting video content, gaming or developing striking 3D 
                         visualizations in Blender.</p>
@@ -884,36 +869,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🚀</div>
-                    <h3>Video Editing</h3>
-                    <p>Adobe Premiere Pro, Filmora, After Effects</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX and 3d Design</h3>
-                    <p>Figma, Canva, Adobe XD, Blender, Adobe animate</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Tools & Technologies</h3>
-                    <p>MySQL, VS Code, XAMPP, OMNeT++, Inbox and calendar management, Google Docs, 
-                        Sheets, Slides, Data entry and online research, 
-                        TSlack, Client communication and scheduling</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="projects" class="section">
         <div class="container">
@@ -945,40 +900,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- <section id="certificates" class="section">
-        <div class="container">
-            <h2 class="section-title">Certificates</h2>
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="Professional Foundations.png" alt="ALX Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <a href="https://savanna.alxafrica.com/certificates/Lp6fEmCe79?utm_campaign=53995757-ALX%20-%202025%20-%20TR%20-%20PF%20C0&utm_medium=email&_hsmi=104714207&utm_content=104714207&utm_source=hs_email" target="_blank" class="certificate-title-link">
-                            <h3 class="certificate-title">ALX Professional Foundations</h3>
-                        </a>
-                        <p>Issued: August 2025</p>
-                        <div class="certificate-issuer">ALX Africa</div>
-                    </div>
-                </div>
-                
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="python basic.png" alt="HackerRank Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <a href="https://www.hackerrank.com/certificates/fe7e91f26dbe" target="_blank" class="certificate-title-link">
-                            <h3 class="certificate-title">Python(Basic)</h3>
-                        </a>
-                        <p>Issued: July 2025</p>
-                        <div class="certificate-issuer">HackerRank</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="contact" class="section">
         <div class="container">
@@ -1016,21 +937,16 @@
     </footer>
 
     <script>
-        // Three.js Scene Setup
         let scene, camera, renderer, particles, geometryGroup;
         let mouseX = 0, mouseY = 0;
         let windowHalfX = window.innerWidth / 2;
         let windowHalfY = window.innerHeight / 2;
 
         function initThreeJS() {
-            // Scene
             scene = new THREE.Scene();
-            
-            // Camera
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
             camera.position.z = 1000;
 
-            // Renderer
             renderer = new THREE.WebGLRenderer({ 
                 canvas: document.getElementById('three-background'),
                 alpha: true,
@@ -1039,12 +955,10 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
 
-            // Create floating 3D objects
             createFloatingObjects();
             createParticleSystem();
             createGeometricShapes();
 
-            // Animation loop
             animate();
         }
 
@@ -1060,12 +974,12 @@
             for (let i = 0; i < 15; i++) {
                 const geometry = geometries[Math.floor(Math.random() * geometries.length)];
                 
-                // Professional red, white, and dark red color palette for 3D objects
+                // Updated to blue color palette
                 const colors = [
-                    new THREE.Color(0xdc2626), // Professional red
-                    new THREE.Color(0xb91c1c), // Darker red
+                    new THREE.Color(0x2563eb), // Primary blue
+                    new THREE.Color(0x1d4ed8), // Darker blue
                     new THREE.Color(0xffffff), // White
-                    new THREE.Color(0x991b1b)  // Deep red
+                    new THREE.Color(0x1e3a8a)  // Deep blue
                 ];
                 
                 const material = new THREE.MeshBasicMaterial({
@@ -1112,12 +1026,12 @@
                 positions[i + 1] = (Math.random() - 0.5) * 2000;
                 positions[i + 2] = (Math.random() - 0.5) * 1000;
 
-                // Professional red, white, and black particle colors
+                // Updated to blue color palette
                 const colorChoices = [
-                    new THREE.Color(0xdc2626), // Professional red
+                    new THREE.Color(0x2563eb), // Primary blue
                     new THREE.Color(0xffffff), // White
-                    new THREE.Color(0xb91c1c), // Darker red
-                    new THREE.Color(0x666666)  // Light gray for subtle contrast
+                    new THREE.Color(0x1d4ed8), // Darker blue
+                    new THREE.Color(0x94a3b8)  // Light gray
                 ];
                 
                 const chosenColor = colorChoices[Math.floor(Math.random() * colorChoices.length)];
@@ -1145,10 +1059,10 @@
         function createGeometricShapes() {
             geometryGroup = new THREE.Group();
 
-            // Central rotating structure - using professional red
+            // Central structure in blue
             const torusGeometry = new THREE.TorusKnotGeometry(100, 30, 100, 16);
             const torusMaterial = new THREE.MeshBasicMaterial({
-                color: 0xdc2626, // Professional red
+                color: 0x2563eb, // Primary blue
                 wireframe: true,
                 transparent: true,
                 opacity: 0.4
@@ -1156,18 +1070,17 @@
             const torus = new THREE.Mesh(torusGeometry, torusMaterial);
             geometryGroup.add(torus);
 
-            // Orbiting cubes using red, white, and dark red palette
+            // Orbiting cubes in blue/white
             for (let i = 0; i < 8; i++) {
                 const cubeGeometry = new THREE.BoxGeometry(30, 30, 30);
                 
-                // Create professional color progression
                 let cubeColor;
                 if (i % 3 === 0) {
-                    cubeColor = 0xdc2626; // Professional red
+                    cubeColor = 0x2563eb; // Primary blue
                 } else if (i % 3 === 1) {
                     cubeColor = 0xffffff; // White
                 } else {
-                    cubeColor = 0xb91c1c; // Darker red
+                    cubeColor = 0x1d4ed8; // Darker blue
                 }
                 
                 const cubeMaterial = new THREE.MeshBasicMaterial({
@@ -1195,7 +1108,6 @@
         function animate() {
             requestAnimationFrame(animate);
 
-            // Rotate floating objects
             if (window.floatingObjects) {
                 window.floatingObjects.forEach(obj => {
                     obj.rotation.x += obj.userData.rotationSpeed.x;
@@ -1204,26 +1116,23 @@
                 });
             }
 
-            // Animate particle system
             if (window.particleSystem) {
                 window.particleSystem.rotation.y += 0.001;
                 window.particleSystem.rotation.x += 0.0005;
             }
 
-            // Animate geometric shapes
             if (geometryGroup) {
                 geometryGroup.rotation.x += 0.005;
                 geometryGroup.rotation.y += 0.01;
                 
                 geometryGroup.children.forEach((child, index) => {
-                    if (index > 0) { // Skip the torus
+                    if (index > 0) {
                         child.rotation.x += 0.02;
                         child.rotation.y += 0.03;
                     }
                 });
             }
 
-            // Mouse interaction
             camera.position.x += (mouseX - camera.position.x) * 0.05;
             camera.position.y += (-mouseY - camera.position.y) * 0.05;
             camera.lookAt(scene.position);
@@ -1231,18 +1140,15 @@
             renderer.render(scene, camera);
         }
 
-        // Mouse movement handler
         document.addEventListener('mousemove', (event) => {
             mouseX = (event.clientX - windowHalfX) * 0.5;
             mouseY = (event.clientY - windowHalfY) * 0.5;
             
-            // Update custom cursor
             const cursor = document.getElementById('cursor');
             cursor.style.left = event.clientX + 'px';
             cursor.style.top = event.clientY + 'px';
         });
 
-        // Window resize handler
         window.addEventListener('resize', () => {
             windowHalfX = window.innerWidth / 2;
             windowHalfY = window.innerHeight / 2;
@@ -1251,10 +1157,8 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // Initialize Three.js when page loads
         window.addEventListener('load', initThreeJS);
 
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1264,7 +1168,6 @@
             });
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1278,49 +1181,40 @@
             });
         }, observerOptions);
 
-        // Observe all animatable elements
         document.querySelectorAll('.section-title, .about-text, .about-image, .skill-card, .project-card, .certificate-card, .contact-form').forEach(el => {
             observer.observe(el);
         });
 
-        // Stagger animation for skill cards
         const skillCards = document.querySelectorAll('.skill-card');
         skillCards.forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.2}s`;
         });
 
-        // Stagger animation for project cards
         const projectCards = document.querySelectorAll('.project-card');
         projectCards.forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.2}s`;
         });
 
-        // Stagger animation for certificate cards
         const certificateCards = document.querySelectorAll('.certificate-card');
         certificateCards.forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.2}s`;
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                navbar.style.background = 'rgba(13, 17, 23, 0.95)';
             } else {
-                navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+                navbar.style.background = 'rgba(13, 17, 23, 0.9)';
             }
         });
 
-        // Form submission - now handled by Formspree
         document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            // Let the form submit naturally to Formspree
-            // Show confirmation message after a brief delay
             setTimeout(() => {
                 alert('Thank you for your message! I\'ll get back to you soon.');
             }, 100);
         });
 
-        // Interactive hover effects
         document.querySelectorAll('.skill-card, .project-card, .certificate-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-15px) scale(1.05)';
@@ -1331,59 +1225,22 @@
             });
         });
 
-        // Smart email function - detects device and opens appropriate email method
-        function openEmail(event) {
-            event.preventDefault();
-            
-            const email = 'victor.oy17@gmail.com';
-            const subject = 'Portfolio Contact';
-            const body = 'Hi Victor,%0A%0AI found your portfolio and would like to get in touch.%0A%0ABest regards,';
-            
-            // Detect if user is on mobile device
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            
-            if (isMobile) {
-                // On mobile, use mailto (opens native email app)
-                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-            } else {
-                // On desktop, try Gmail web interface first, fallback to mailto
-                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-                
-                // Try to open Gmail web interface
-                const gmailWindow = window.open(gmailUrl, '_blank');
-                
-                // If popup was blocked or failed, fallback to mailto
-                if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
-                    setTimeout(() => {
-                        if (gmailWindow && gmailWindow.closed) {
-                            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-                        }
-                    }, 1000);
-                }
-            }
-        }
-    </script>
-    <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
 
-    // Toggle hamburger to "X" and menu visibility
-    menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('show');
-    });
-
-    // Auto-close menu on mobile when clicking a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
-                menuToggle.classList.remove('active');
-            }
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('show');
         });
-    });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
     </script>
-
-
 </body>
 </html>
